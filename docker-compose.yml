@@ -1,0 +1,31 @@
+version: '3'
+services:
+  gatewayzuul:
+    image: pontusf/lab2:gateway
+    container_name: gatewayzuul
+    ports:
+      - "8762:8762"
+
+  server:
+    image: pontusf/lab2:server
+    container_name: server
+    ports:
+      - "8761:8761"
+
+  auth:
+    image: pontusf/lab2:auth
+    
+
+
+  product:
+    image: pontusf/lab2:product
+    container_name: product
+
+  warehouse:
+    image: pontusf/lab2:warehouse
+    container_name: warehouse
+
+  order:
+    image: pontusf/lab2:order
+    container_name: order
+
