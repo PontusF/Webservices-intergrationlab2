@@ -1,0 +1,21 @@
+ribbon:
+  ReadTimeout: 90000
+  ConnectTimeout: 90000
+
+eureka:
+  enabled: true
+
+zuul:
+  host:
+    max-total-connections: 1000
+    max-per-route-connections: 100
+  semaphore:
+    max-semaphores: 500
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 20000
